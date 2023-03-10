@@ -1,6 +1,6 @@
 # action.yml
 name: 'Git hours'
-author: "Denis Silva (@denstorti)"
+author: "rjdevnic"
 description: 'Git hours action'
 runs:
   using: 'docker'
