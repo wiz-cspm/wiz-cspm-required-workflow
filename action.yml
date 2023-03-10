@@ -1,0 +1,13 @@
+# action.yml
+name: 'Git hours'
+author: "Denis Silva (@denstorti)"
+description: 'Git hours action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: clock
+  color: blue
+outputs:
+  hours:
+    description: "The amount of time spent in the repository"
