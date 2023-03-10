@@ -3,7 +3,7 @@ on: [push]
 jobs:
   git_hours_job:
     runs-on: ubuntu-latest
-    name: Test - Calculate hours spent
+    name: Calculate hours spent
     steps:
       # To use this repository's private action,
       # you must check out the repository
@@ -15,12 +15,12 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: githours
       # Use the output from the `hello` step
-      - name: Get the output 
+      - name: Hour Spent by User
         run: |
           echo -e '${{steps.githours.outputs.hours}}' 
-          echo -e '${{steps.githours.outputs.hours}}' > report.json
-      - name: Upload report
-        uses: actions/upload-artifact@v1
-        with:
-          name: hours_spent
-          path: report.json
+          #echo -e '${{steps.githours.outputs.hours}}' > report.json
+      #- name: Upload report
+       # uses: actions/upload-artifact@v1
+        #with:
+         # name: hours_spent
+          #path: report.json
